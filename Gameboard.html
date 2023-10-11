@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Gameboard.css">
+  <script src="Gameboard.js" defer></script>
+  
+  <title>ZackD | Tic Tac Toe</title>
+</head>
+<body>
+
+  <div class="main-container">
+    <div class="Head-2">
+      <img src="images/logo.svg" alt="">
+    </div>
+
+    <div class="FirstPlayer">
+
+      <h1>PICK PLAYER 1'S MARK</h1>
+
+      <div class="chmark">
+        <input type="checkbox" name="ChoiceofPlayer" id="CheckBox">
+        <div class="CHOICEBOX">
+          <div class="ChoiceX">
+            <img id="X1choice" src="images/X-ICON.svg" alt="">
+          </div>
+          <div class="ChoiceO">
+            <img src="images/O-ICON.svg" alt="" id="O1choice">
+          </div>
+        </div>
+      </div>
+
+      <div class="reminder">
+        <p id="Para">REMEMBER: X GOES FIRST</p>
+      </div>
+
+    </div>
+
+    <div class="StartButts">
+      <a href="#"><button id="btn-1">NEW GAME (VS CPU)</button></a>
+      <a href="#"><button id="btn-2">NEW GAME (VS PLAYER)</button></a>
+    </div>
+
+</div>
+
+  <div class="overlay" id="">
+    <div class="overcontainer">
+      <p class="marge" id="WON-LOST">OH NO, YOU LOST...</p>
+      <div class="winner"></div>
+      <div class="next-btn">
+        <button id="QUIT">QUIT</button>
+        <button id="NEXT">NEXT ROUND</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay-2" id="">
+    <div class="overcontainer">
+      <p class="marge" id="Restart-Menu">RESTART GAME ?</p>
+      <div class="next-btn">
+        <button id="CANCEL">NO, CANCEL</button>
+        <button id="RESTART-CONF">YES, RESTART</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="game-container OFF">
+
+      <div class="Head">
+        <img id="logo" src="images/logo.svg" alt="">
+        <div class="TurnX">
+            <div id="JSTurn"><img src="images/icon-x-3rd.svg" alt="" width="20" height="20"></div>
+            <div>
+              <p id="TURN marge">TURN</p>
+            </div>
+        </div>
+        <div id="restart-btn"><img  src="images/icon-restart.svg" alt=""></div>
+      </div>
+
+      <div class="gameboard">
+        <div class="square" id="sq11"><img src="images/icon-x-outline.svg" alt="" class="x-outline"></div>
+        <div class="square" id="sq12"><img src="images/icon-x-outline.svg" alt="" class="x-outline"></div>
+        <div class="square" id="sq13"><img src="images/icon-x-outline.svg" alt="" class="x-outline"></div>
+        <div class="square" id="sq21"><img src="images/icon-x-outline.svg" alt="" class="x-outline"></div>
+        <div class="square" id="sq22"><img src="images/icon-x-outline.svg" alt="" class="x-outline"></div>
+        <div class="square" id="sq23"><img src="images/icon-x-outline.svg" alt="" class="x-outline"></div>
+        <div class="square" id="sq31"><img src="images/icon-x-outline.svg" alt="" class="x-outline"></div>
+        <div class="square" id="sq32"><img src="images/icon-x-outline.svg" alt="" class="x-outline"></div>
+        <div class="square" id="sq33"><img src="images/icon-x-outline.svg" alt="" class="x-outline"></div>
+      </div>
+
+      <div class="scoreboard">
+        <div class="score" id="xscore">
+            <p class="Player marge" id="X-Player">X (YOU)</p>
+            <p id="Xscore" class="scorenum marge">0</p>
+        </div>
+        <div class="score" id="ties">
+            <p class="Player marge">TIES</p>
+            <p id="TiesScore" class="scorenum marge">0</p>
+        </div>
+        <div class="score" id="oscore">
+            <p class="Player marge" id="O-Player">O (CPU)</p>
+            <p id="Oscore" class="scorenum marge">0</p>
+        </div>
+      </div>
+
+  </div>
+</body>
+</html>

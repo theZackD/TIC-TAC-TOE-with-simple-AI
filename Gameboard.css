@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap');
+
+
+body {
+    box-sizing: border-box;
+    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1A2A33;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+
+}
+
+.game-container {
+    background-color: #1A2A33;
+    width: 460px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.gameboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    background-color: #1A2A33;
+
+}
+
+.square {
+    background-color: #1F3641;
+    width: 140px;
+    height: 140px;
+    box-shadow: #121e24 0 8px;
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.x-outline {
+    display: none;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.square:hover .x-outline {
+    display: block;
+}
+
+.Osquare {
+    background-color: #F2B137;
+}
+
+.Xsquare {
+    background-color: #31C3BD;
+}
+
+.GBcontainer {
+    position: relative;
+}
+
+.gameboard-shadow {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    background-color: #1A2A33;
+    position: absolute;
+    top:0;
+
+}
+
+.square-shadow {
+    background-color: #1F3641;
+    width: 140px;
+    height: 140px;
+    box-shadow: #121e24 0 8px;
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.scoreboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 460px;
+    gap: 20px;
+}
+
+.score {
+    background-color: #0e181d;
+    width: 140px;
+    height: 68px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+    gap: 0;
+}
+
+.Player {
+    font-size: 14px;
+}
+
+p {
+    margin: 0;
+}
+
+.scorenum {
+    font-size: 24px;
+}
+
+#xscore {
+    background-color: #31C3BD;
+}
+
+#ties {
+    background-color: #A8bFC9;
+}
+
+#oscore {
+    background-color: #F2B137;
+}
+
+.Head {
+    background-color: #1A2A33;
+    display: grid;
+    grid-template-columns: 75px 1fr 52px;
+    width: 460px;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    height: 60px;
+}
+
+.TurnX {
+    background-color: #1F3641;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color:#A8bFC9;
+    width: 140px;
+    height: 48px;
+    border-radius: 10px;
+    box-shadow: #0e181d 0 4px;
+}
+
+#TURN {
+    font-size: 16px;
+    color: #A8bFC9;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+#restart-btn {
+    background-color: #A8bFC9;
+    width: 52px;
+    height: 48px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: #a8bfc98a 0 4px;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 110%;
+    background-color: rgba(0, 0, 0, 0.575);
+    z-index: 100;
+}
+
+.overlay-2 {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 110%;
+    background-color: rgba(0, 0, 0, 0.575);
+    z-index: 100;
+}
+
+#ON {
+    display: flex;
+}
+
+.overcontainer {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #1F3641;
+    width: 100%;
+    height: 270px;
+}
+
+.next-btn {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+#QUIT {
+    width: 76px;
+    height: 48px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    background-color: #A8bFC9;
+    box-shadow: #6d8d9b 0 5px;
+    font-family: Outfit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#NEXT {
+    width: 146px;
+    height: 48px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    background-color:#F2B137;
+    box-shadow: #9b7020 0 5px;
+    font-family: Outfit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#Restart-Menu {
+    font-size: 30px;
+    color: #A8bFC9;
+}
+
+#CANCEL {
+    height: 48px;
+    width: 150px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    background-color: #A8bFC9;
+    box-shadow: #6d8d9b 0 5px;
+    font-family: Outfit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#RESTART-CONF {
+    width: 150px;
+    height: 48px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    background-color:#F2B137;
+    box-shadow: #9b7020 0 5px;
+    font-family: Outfit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#WON-LOST {
+    font-size: 16px;
+    color: #A8bFC9;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+}
+
+#TAKESX {
+    font-size: 40px;
+    color:#31C3BD;
+    letter-spacing: 2.5px;
+}
+
+#TAKESO {
+    font-size: 40px;
+    color: #F2B137;
+    letter-spacing: 2.5px;
+}
+
+#NoTAKES {
+    font-size: 40px;
+    color: #A8bFC9;
+    letter-spacing: 2.5px;
+}
+
+
+.winner {
+    display: flex;
+    gap: 24px;
+}
+
+
+/*---Index styling------------------------------------------------------------------------------------------------------*/
+
+
+.main-container {
+    background-color: #1A2A33;
+    width: 460px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+#O1choice {
+    width: 32px;
+    height: 32px;
+    filter: invert(9%)
+            sepia(9%) 
+            saturate(3080%) 
+            hue-rotate(158deg) 
+            brightness(98%) 
+            contrast(85%);
+
+
+}
+
+#X1choice {
+    width: 32px;
+    height: 32px;
+    filter: invert(100%) 
+            sepia(23%) 
+            saturate(4303%) 
+            hue-rotate(170deg) 
+            brightness(83%) 
+            contrast(87%);
+}
+
+.ChoiceX {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1A2A33;
+    width: 198px;
+    height: 54px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.ChoiceO {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #A8bFC9;
+    width: 198px;
+    height: 54px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.chmark {
+    background-color: #1A2A33;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 412px;
+    height: 72px;
+
+}
+
+.FirstPlayer {
+    background-color: #1F3641;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 460px;
+    height: 150px;
+    border-radius: 20px;
+    box-shadow: 0 7px #0000004d;
+}
+
+.CHOICEBOX {
+    display: flex;
+
+}
+
+#CheckBox {
+    position: absolute;
+    outline: auto;
+    width: 410px;
+    height: 70px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#CheckBox:checked + .CHOICEBOX > .ChoiceX {
+    background-color: #A8bFC9;
+}
+
+#CheckBox:checked + .CHOICEBOX > .ChoiceO {
+    background-color: #1A2A33;
+}
+
+#CheckBox:checked + .CHOICEBOX > .ChoiceO> #O1choice {
+    filter: invert(100%) 
+            sepia(23%) 
+            saturate(4303%) 
+            hue-rotate(170deg) 
+            brightness(83%) 
+            contrast(87%);
+}
+
+#CheckBox:checked + .CHOICEBOX > .ChoiceX > #X1choice {
+    filter: invert(9%)
+            sepia(9%) 
+            saturate(3080%) 
+            hue-rotate(158deg) 
+            brightness(98%) 
+            contrast(85%);
+}
+
+
+.Head-2 {
+    display: grid;
+    justify-content: center;
+    /* margin: 10px 0 50px 0; */
+}
+
+button {
+    border-radius: 20px;
+    width: 460px;
+    height: 60px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 1.25px;
+    cursor: pointer;
+}
+
+.StartButts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#btn-1 {
+    background-color: #F2B137;
+    border: none;
+    box-shadow: 0 7px #f2b137a6;
+}
+
+#btn-1:hover {
+    background-color: #FFC860;
+}
+
+
+
+#btn-2 {
+    background-color: #31C3BD;
+    border: none;
+    box-shadow: 0 7px #31c3be9d;
+}
+
+#btn-2:hover {
+    background-color: #65E9E4;
+}
+
+
+h1 {
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+#Para {
+    font-size: 14px;
+    font-weight: 500;
+    color: #A8bFC9;
+    opacity: .4;
+    margin: 10px;
+}
+
+
+
+
+
+/*----------------------------------------*/
+
+.OFF {
+    display: none;
+}
