@@ -171,6 +171,10 @@ p {
     cursor: pointer;
 }
 
+#restart-btn:hover, #CANCEL:hover, #QUIT:hover{
+    background-color: #d1dee4;
+}
+
 .overlay {
     position: fixed;
     display: none;
@@ -243,6 +247,10 @@ p {
     font-family: Outfit;
     font-weight: 600;
     cursor: pointer;
+}
+
+#NEXT:hover{
+    background-color: #ffbe45;
 }
 
 #Restart-Menu {
@@ -478,6 +486,7 @@ button {
 
 
 h1 {
+    color: #A8bFC9;
     font-size: 16px;
     letter-spacing: 1px;
 }
@@ -498,4 +507,90 @@ h1 {
 
 .OFF {
     display: none;
+}
+
+
+
+
+@media (max-width: 375px) {
+    .game-container, .main-container {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .gameboard{
+        width: 328px;
+        height: 516px;
+        margin: auto;
+        
+    }
+
+    .Head {
+        width: 328px;
+        margin: auto;
+    }
+    .square {
+        width: 96px;
+        height: 96px;
+    }
+
+    #X, #O {
+        width: 40px;
+        height: 40px;
+    }
+
+    .scoreboard {
+        width: 382px;
+    }
+
+    .score {
+        width: 96px;
+        height: 64px;
+    }
+
+    .x-outline {
+        width: 40px;
+        height: 40px;
+    }
+
+    #TAKESX, #TAKESO {
+        font-size: 24px;
+        letter-spacing: 2.5px;
+    }
+
+    .FirstPlayer{
+        width: 330px;
+        margin: auto;
+        margin-bottom: 0;
+    }
+    .StartButts {
+        width: 328px;
+        margin: auto;
+        margin-top: 0;
+    }
+    #btn-1, #btn-2 {
+        width: 328px;
+        margin: auto;
+    }
+
+    .chmark {
+        width: 375px;
+    }
+
+    #CheckBox {
+        width: 328px;
+    }
+
+    .ChoiceX, .ChoiceO {
+        width: 132px;
+    }
+
+    .CHOICEBOX {
+        width: 279px;
+    }
+
+    .Head-2 {
+        margin-top: 100px;
+        margin-bottom: -100px;
+    }
 }

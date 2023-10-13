@@ -1,5 +1,11 @@
 // Declaring Variables:--------------------------------------------------------------------------------------//
 
+const FullHTML = document.querySelector('html')
+
+if (localStorage.getItem('PageState') != null){
+    FullHTML.innerHTML = '<!DOCTYPE html>' + localStorage.getItem('PageState')
+}
+
 const Game_container = document.querySelector('.game-container')
 const Main_container = document.querySelector('.main-container')
 
@@ -13,13 +19,13 @@ const O_outline = '<img src="images/icon-o-outline.svg" alt="" class="x-outline"
 
 const WinBanner = document.querySelector('.winner')
 
-const Xwin = '<img src="images/icon-x.svg" alt=""><p id="TAKESX">TAKES THE ROUND</p>'
-const Owin = '<img src="images/icon-o.svg" alt=""><p id="TAKESO">TAKES THE ROUND</p>'
+const Xwin = '<img id="X" src="images/icon-x.svg" alt=""><p id="TAKESX">TAKES THE ROUND</p>'
+const Owin = '<img id="O" src="images/icon-o.svg" alt=""><p id="TAKESO">TAKES THE ROUND</p>'
 
 let WIN_LOSS = document.getElementById('WON-LOST')
 
-const O = '<img src="images/icon-o.svg" alt=""></img>'
-const X = '<img src="images/icon-x.svg" alt=""></img>'
+const O = '<img id="O" src="images/icon-o.svg" alt=""></img>'
+const X = '<img id="X" src="images/icon-x.svg" alt=""></img>'
 
 const WinX = '<img src="images/icon-x-neg.svg" alt=""></img>'
 const WinO = '<img src="images/icon-o-neg.svg" alt=""></img>'
@@ -1417,6 +1423,7 @@ function QUIT(){
     
     Game_container.classList.add('OFF');
     Main_container.classList.remove('OFF');
+    localStorage.clear()
 }
 
 function NextRound(){
@@ -1462,6 +1469,14 @@ function Restart_Game(){
     OscoreDisp.innerHTML = Oscore;
     TiescoreDisp.innerHTML = Tiescore;
     c = 0;
+    localStorage.clear()
 };
 
 Restart_conf.addEventListener('click', Restart_Game);
+
+function SavePageState() {
+    localStorage.setItem('PageState', FullHTML.innerHTML)
+}
+
+
+FullHTML.addEventListener('click', SavePageState)
