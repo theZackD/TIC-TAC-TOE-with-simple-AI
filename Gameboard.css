@@ -512,7 +512,7 @@ h1 {
 
 
 
-@media (max-width: 375px) {
+@media (max-width: 480px) {
     .game-container, .main-container {
         width: 100vw;
         height: 100vh;
