@@ -1380,18 +1380,21 @@ function MakeMoveplusCPU_O(event){
 
 function FullMakeMove(event){
 
-    if(Mark_Choice.checked){
-        if(CPU_var){
-            MakeMoveplusCPU_O(event);
+    if(event.target.innerHTML == X_outline || event.target.innerHTML == O_outline){
+        if(Mark_Choice.checked){
+            if(CPU_var){
+                MakeMoveplusCPU_O(event);
+            } else {
+                MakeMove(event);
+            }
         } else {
-            MakeMove(event);
+            if(CPU_var){
+                MakeMoveplusCPU_X(event);
+            } else {
+                MakeMove(event);
+            }
         }
-    } else {
-        if(CPU_var){
-            MakeMoveplusCPU_X(event);
-        } else {
-            MakeMove(event);
-        }
+        
     }
 }
 
