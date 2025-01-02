@@ -1,2 +1,1 @@
-./preview.jpg
-
+[Preview](./preview.jpg)
